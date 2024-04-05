@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link rel="stylesheet" href="shoppingcart.css">
+</head>
+<body>
+    <section class="menu">
+        <a onclick="return flase" class="shopBtn">Shopping</a>
+        <a onclick="return flase" class="cartBtn">View cart</a>
+
+    </section>
+    <section class="shop">
+        <div class="item-container">
+
+        </div>
+    </section>
+    <section class="cart">
+        <table>
+            <thead class="thead">
+                <th colspan="2">item</th>
+                <th>price</th>
+                <th colspan="2">quantity</th>
+            </thead>
+            <tbody class="tbody">
+              <tr class="totalrow">
+                <td colspan="5">Total :₹ 0.00</td>
+              </tr>  
+            </tbody>
+        </table>
+        <button class="btn checkout-btn">checkout</button>
+    </section>
+<script src="script.js" defer></script>
+</body>
+</html>

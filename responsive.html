@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.flex-container {
+    display: flex;
+    background-color: white;
+    font-family: "Nanum Myeongjo", serif;
+    background-color: #1f2833;
+}
+
+.flex-container > div {
+    color: #66fcf1;
+    align-content: left;
+    margin: 10px;
+    padding: 10px;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+}
+
+#nav {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+#nav img {
+    height: 50px;
+    margin-right: 170px;
+}
+
+#nav1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+#nav1 h4 {
+    margin-right: 60px;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+}
+
+#nav1 h4:hover {
+    transform: scale(1.5);
+    z-index: 2;
+    transition: 0.3s all ease-in-out;
+}
+
+#nav1 h4.present::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #45a29e;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#nav2 i {
+    margin-right: 60px;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+#page-header {
+    /*backround image */
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#products {
+    /* padding:10px 12px; */
+    margin-left: 70px;
+}
+
+#products .mainproduct {
+    display: flex;
+    /* justify-content: space-between; */
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+#products .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 3px solid #cce7d0;
+    border-radius: 25px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+}
+
+#products .pro:hover {
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.06);
+}
+
+#products .pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#products .pro .des {
+    text-align: start;
+    padding: 10px 0;
+}
+
+#products .pro .des h4 {
+    font-size: 12px;
+}
+
+#products .pro-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-container {
+    max-width: 1170px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    background-color: #1f2833;
+    padding: 0;
+    width: 100%;
+    height: 210px;
+    /* display:flex; */
+    float: end;
+    margin-top: 100px;
+}
+
+.footer-col {
+    width: 20%;
+    margin-left: 50px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #8dfdf5;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+    margin: 35px 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #b3fef8;
+    font-weight: 300;
+    color: #c6fefa;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    #nav img {
+        margin-right: 0;
+    }
+
+    #nav1 h4 {
+        margin-right: 30px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class data-focus="pre-mouse" style="overflow:auto;">
+        <div class="flex-container">
+            <div><pre><span><b>HELP</b></span></pre></div></label>
+            <div><pre><span><b>ORDER STATUS</b></span></pre></div></label>
+            <div><pre><b>JOIN US</b></pre></div> 
+        </div>
+    <!-- navigation bar -->
+    <div id="nav">
+     <div id="nav1">
+        <h4><img src="logo.png" alt=""  height="1px"></h4>
+        <h4><a href="startingpage.html" style="color:#45a29e;text-decoration: none;">Home</a></h4>
+        <h4 >
+           <a href="shoppage.html" style="color:#ffb703;text-decoration: none;">Featured</a>
+      </h4>
+            <h4 >
+                <a href="menproducts.html"style="color:#45a29e;text-decoration: none;">Men</a>
+           </h4>
+            </h4>
+            <h4 >
+                <a href="women.html" style="color:#45a29e;text-decoration: none;";
+               >Women</a>
+            </h4>
+            <h4 >
+                <a href="#" style="color:#45a29e;text-decoration: none;">Contact</a>
+               </h4>
+            <h4>
+                <a href="#" style="color:#45a29e;text-decoration: none;">Log Out</a>
+               </h4>
+           </div></div></div>
+
+    <section id="page-header">
+        <h2>#stayhome</h2>
+        <p>save more with coupon & up to 20% off</p>
+    </section>
+    <section id ="products">
+        <div class="pro-container">
+            <div class="pro">
+                <img src="SHOES\WOMEN\Above 15K\Women city\city-classic-boots-fclx5W.jpg" alt="">
+                <div class="des">
+                    <h4><b>Nike City Classic </b></h4>
+                    <h6>Women'S shoes</h6>
+                    <h4>MRP : ₹ 10 275.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\WOMEN\Above 15K\Women gp\gp-challenge-pro-hard-court-tennis-shoes-HBvCGt (1).png" alt="">
+                <div class="des">
+                    <h4><b>Nike GP Challenge pro Premium</b></h4>
+                    <h6>Women'S shoes</h6>
+                    <h4>MRP : ₹ 10 795.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\MEN\Above 15K\Men (Hustle 2)\air-zoom-gt-hustle-2-sd-ep-basketball-shoes-fDdc57.png" alt="">
+                <div class="des">
+                    <h4><b>Nike Air Zoom G.T. Hustle 2 SD EP</b></h4>
+                    <h6>Men's Shoes</h6>
+                    <h4>MRP : ₹ 15 995.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\MEN\Above 15K\Men (infinity 4)\infinityrn-4-gore-tex-waterproof-road-running-shoes-rWcGS1.jpg" alt="">
+                <div class="des">
+                    <h4><b>Nike InfinityRN 4 GORE-TEX</b></h4>
+                    <h6>Men's Waterproof Road Running Shoes</h6>
+                    <h4>MRP : ₹ 16 147.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\WOMEN\Above 15K\Women max bliss\air-max-bliss-shoes-s5GGkX (1).png" alt="">
+                <div class="des">
+                    <h4><b>nike air max bliss</b></h4>
+                    <h6>Women'S shoes</h6>
+                    <h4>MRP : ₹ 12 795.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\WOMEN\Above 15K\Women metcon 9\metcon-9-workout-shoes-hVBpSC.png" alt="">
+                <div class="des">
+                    <h4><b>nike metcon 9</b></h4>
+                    <h6>Women'S shoes</h6>
+                    <h4>MRP : ₹ 12 795.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\MEN\Under 10K\Men  (air max solo)\air-max-solo-shoes-qVq5jJ.png" alt="">
+                <div class="des">
+                    <h4><b>nike air max solo</b></h4>
+                    <h6>Men's Shoes</h6>
+                    <h4>MRP : ₹ 8 695.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\MEN\Under 10K\Men  (chron 2)\sb-chron-2-canvas-skate-shoe-zdBtfH.png" alt="">
+                <div class="des">
+                    <h4><b>Nike SB Chron 2 Canvas</b></h4>
+                    <h6>Men's Shoes</h6>
+                    <h4>MRP : ₹ 4 495.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\MEN\Under 10K\Men  (court royale 2)\nikecourt-royale-2-next-nature-shoes-RRcr20.png" alt="">
+                <div class="des">
+                    <h4><b>NikeCourt Royale 2 Next Nature</b></h4>
+                    <h6>Men's Shoes</h6>
+                    <h4>MRP : ₹ 3 995.00</h4>
+                </div>
+                </div>
+            <div class="pro">
+                <img src="SHOES\WOMEN\Above 15K\women superfly\mercurial-superfly-9-academy-high-top-football-shoes-6NvfmT (1).png" alt="">
+                <div class="des">
+                    <h4><b>nike mercurial superfly 9 elitek</b></h4>
+                    <h6>Women'S shoes</h6>
+                    <h4>MRP : ₹ 22 995.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\WOMEN\Above 15K\Women trail4\pegasus-trail-4-trail-running-shoes-ccqgBb (1).png" alt="">
+                <div class="des">
+                    <h4><b>nike pegasus trail 4</b></h4>
+                    <h6>Women'S shoes</h6>
+                    <h4>MRP : ₹ 11 595.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\WOMEN\Above 15K\Women vomero5\zoom-vomero-5-shoes-t4v5B6.png" alt="">
+                <div class="des">
+                    <h4><b>nike zoom vomero 5</b></h4>
+                    <h6>Women'S shoes</h6>
+                    <h4>MRP : ₹ 14 995.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\WOMEN\Above 15K\Women wild\air-force-1-wild-shoes-FCjQ2C.jpg" alt="">
+                <div class="des">
+                    <h4><b>nike air force 1 wild</b></h4>
+                    <h6>Women'S shoes</h6>
+                    <h4>MRP : ₹ 12 795.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\WOMEN\Under 10K\Women (air max sc)\air-max-sc-shoes-FVn5sK (1).png" alt="">
+                <div class="des">
+                    <h4><b>Nike Air Max SC</b></h4>
+                    <h6>Women'S shoes</h6>
+                    <h4>MRP : ₹ 5 995.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\WOMEN\Under 10K\Women (canvas)\nikecourt-legacy-canvas-shoes-L6X9xF.png" alt="">
+                <div class="des">
+                    <h4><b>NikeCourt Legacy Canvas</b></h4>
+                    <h6>Women'S shoes</h6>
+                    <h4>MRP : ₹ 3 995.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\MEN\Above 15K\Men (11 attack)\nikecourt-air-zoom-vapor-11-attack-hard-court-tennis-shoes-cdGbjB.png" alt="">
+                <div class="des">
+                    <h4><b>nikecourt air zoom vapor 11 attack</b></h4>
+                    <h6>Men's Shoes</h6>
+                    <h4>MRP : ₹ 16 995.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\MEN\Above 15K\Men (drift)\air-max-plus-drift-shoes-FCM3Rg.png" alt="">
+                <div class="des">
+                    <h4><b>Nike Air Max Plus Drift</b></h4>
+                    <h6>Men's Shoes</h6>
+                    <h4>MRP : ₹ 16 295.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\MEN\Above 15K\Men (fly 2)\acg-mountain-fly-2-low-gore-tex-shoes-K2mL6t.png" alt="">
+                <div class="des">
+                    <h4><b>Nike ACG Mountain Fly 2 Low GORE-TEX</b></h4>
+                    <h6>Men's Shoes</h6>
+                    <h4>MRP : ₹ 16 995.00</h4>
+                </div>
+            </div>
+            
+            <div class="pro">
+                <img src="SHOES\MEN\Above 15K\Men (lunar force)\lunar-force-1-duckboot-xpzdvK.png" alt="">
+                <div class="des">
+                    <h4><b>Nike Lunar Force 1k</b></h4>
+                    <h6>Men's Duckboot</h6>
+                    <h4>MRP : ₹ 16 995.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\MEN\Above 15K\Men (tour 3)\air-zoom-victory-tour-3-golf-shoes-5X9wGF.png" alt="">
+                <div class="des">
+                    <h4><b>Nike Air Zoom Victory Tour 3 Boa</b></h4>
+                    <h6>Men's Shoes</h6>
+                    <h4>MRP : ₹ 19 295.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\MEN\Above 15K\Men (uptempo 96)\air-more-uptempo-96-shoes-x7J3ls.png" alt="">
+                <div class="des">
+                    <h4><b>Nike Air More Uptempo '96</b></h4>
+                    <h6>Men's Shoes</h6>
+                    <h4>MRP : ₹ 16 995.00</h4>
+                </div>
+            </div>
+            
+        
+            <div class="pro">
+                <img src="SHOES\MEN\Under 10K\Men  (downshifter 12)\downshifter-12-road-running-shoes-kQLnZn.png" alt="">
+                <div class="des">
+                    <h4><b>Nike Downshifter 12</b></h4>
+                    <h6>Men's Shoes</h6>
+                    <h4>MRP : ₹ 3 995.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\MEN\Under 10K\Men  (downshifter 13)\downshifter-13-road-running-shoes-4Gw85J.png" alt="">
+                <div class="des">
+                    <h4><b>Nike Downshifter 13</b></h4>
+                    <h6>Men's Shoes</h6>
+                    <h4>MRP : ₹ 4 295.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\MEN\Under 10K\Men  (legend 10)\tiempo-legend-10-club-low-top-football-shoes-9CJFpp.png" alt="">
+                <div class="des">
+                    <h4><b>Nike Tiempo Legend 10 Club</b></h4>
+                    <h6>Men's Shoes</h6>
+                    <h4>MRP : ₹ 4 995.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\MEN\Under 10K\Men  (revolution 6)\revolution-6-road-running-shoes-NC0P7k.png" alt="">
+                <div class="des">
+                    <h4><b>Nike Revolution 6</b></h4>
+                    <h6>Men's Shoes</h6>
+                    <h4>MRP : ₹ 3 695.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\MEN\Under 15K\Men  (kd16)\kd16-ep-basketball-shoes-ZX0HSQ.jpg" alt="">
+                <div class="des">
+                    <h4><b>KD16 EP</b></h4>
+                    <h6>Men's Shoes</h6>
+                    <h4>MRP : ₹ 13 995.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\MEN\Under 15K\Men  (pulse)\air-max-pulse-shoes-zD62r3.png" alt="">
+                <div class="des">
+                    <h4><b>Nike Air Max Pulse</b></h4>
+                    <h6>Men's Shoes</h6>
+                    <h4>MRP : ₹ 14 995.00</h4>
+                </div>
+            </div>
+        <div class="pro">
+            <img src="SHOES\MEN\Under 15K\Men  (stay loyal 3)\jordan-stay-loyal-3-shoes-GNHN2X.jpg" alt="">
+            <div class="des">
+                <h4><b>nikecourt-air-zoom-vapor-11-attack</b></h4>
+                <h6>Men's Shoes</h6>
+                <h4>MRP : ₹ 16 995.00</h4>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="SHOES\MEN\Under 10K\Men  (Revolution 7 easy on)\revolution-7-easyon-road-running-shoes-nNqdwt.png" alt="">
+            <div class="des">
+                <h4><b>jordan stay loyal 3</b></h4>
+                <h6>Men's Shoes</h6>
+                <h4>MRP : ₹ 10 295.00</h4>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="SHOES\MEN\Under 15K\Men  (turbo)\pegasus-turbo-road-running-shoes-MSSVMK.png" alt="">
+            <div class="des">
+                <h4><b>Nike Pegasus Turbo</b></h4>
+                <h6>Men's Shoes</h6>
+                <h4>MRP : ₹ 13 995.00</h4>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="SHOES\MEN\Under 15K\Men  (unity 3)\cosmic-unity-3-basketball-shoes-hcwmW0.jpg" alt="">
+            <div class="des">
+                <h4><b>Cosmic Unity 3                    </b></h4>
+                <h6>Men's Shoes</h6>
+                <h4>MRP : ₹ 13 995.00</h4>
+            </div>
+        </div>
+       
+            <div class="pro">
+                <img src="SHOES\WOMEN\Under 10K\Women (downshifter 12)\downshifter-12-road-running-shoes-NxhwFD.png" alt="">
+                <div class="des">
+                    <h4><b>Nike Downshifter 12</b></h4>
+                    <h6>Women'S shoes</h6>
+                    <h4>MRP : ₹ 3 995.00</h4>
+                </div>
+                </div>
+        
+            <div class="pro">
+                <img src="SHOES\WOMEN\Under 10K\Women (initiator)\initiator-shoes-zK1vW9.png" alt="">
+                <div class="des">
+                    <h4><b>Nike Initiator</b></h4>
+                    <h6>Women'S shoes</h6>
+                    <h4>MRP : ₹ 7 495.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\WOMEN\Under 10K\Women (run11)\experience-run-11-road-running-shoes-Wvpjwg.png" alt="">
+                <div class="des">
+                    <h4><b>Nike experience run 11</b></h4>
+                    <h6>Women'S shoes</h6>
+                    <h4>MRP : ₹ 4 995.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\WOMEN\Under 10K\Women (tanjun)\tanjun-shoes-JM6cNK.png" alt="">
+                <div class="des">
+                    <h4><b>Nike Tanjun</b></h4>
+                    <h6>Women'S shoes</h6>
+                    <h4>MRP : ₹ 4 995.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\WOMEN\Under 10K\Women downshifter13\downshifter-13-road-running-shoes-2Bm363'(4).png" alt="">
+                <div class="des">
+                    <h4><b>Nike downshifter 13</b></h4>
+                    <h6>Women'S shoes</h6>
+                    <h4>MRP : ₹ 4 295.00</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="SHOES\WOMEN\Under 10K\Women legend3\legend-essential-3-next-nature-workout-shoes-sJBRlm(5).png" alt="">
+                <div class="des">
+                    <h4><b>Nike Legend Essential 3 Next Nature</b></h4>
+                    <h6>Women'S shoes</h6>
+                    <h4>MRP : ₹ 4 995.00</h4>
+                </div>
+            </div>
+             <div class="pro">
+            <img src="SHOES\MEN\Under 15K\Men (jumpman)\jumpman-two-trey-shoes-rhmBzG.png" alt="">
+            <div class="des">
+                <h4><b>Jumpman Two Trey</b></h4>
+                <h6>Men's Shoes</h6>
+                <h4>MRP : ₹ 16 995.00</h4>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="SHOES\WOMEN\Under...15K\Women Al8\al8-shoes-Xs723b (1).png" alt="">
+            <div class="des">
+                <h4><b>Nike Al8 </b></h4>
+                <h6>Women'S shoes</h6>
+                <h4>MRP : ₹ 8 495.00</h4>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="SHOES\WOMEN\Under...15K\Women cortez\cortez-shoes-tDJ6fc (2).png" alt="">
+            <div class="des">
+                <h4><b>Nike Cortez</b></h4>
+                <h6>Women'S shoes</h6>
+                <h4>MRP : ₹ 11 895.00</h4>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="SHOES\MEN\Under 15K\Men (peg 2k5)\air-peg-2k5-white-and-black-fj1909-100-release-date.jpg" alt="">
+            <div class="des">
+                <h4><b>Air Peg 2K5</b></h4>
+                <h6>Men's Shoes</h6>
+                <h4>MRP : ₹ 13 995.00</h4>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="SHOES\MEN\Under 15K\Men (Terminator)\terminator-low-shoes-8sqr67.png" alt="">
+            <div class="des">
+                <h4><b>Nike Terminator Low Premium</b></h4>
+                <h6>Men's Shoes</h6>
+                <h4>MRP : ₹ 13 995.00</h4>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="SHOES\WOMEN\Under 10K\Women SB zoom\sb-zoom-blazer-low-pro-gt-skate-shoes-ckWK6g (1).png" alt="">
+            <div class="des">
+                <h4><b>Nike SB Zoom Blazer Low Pro GT</b></h4>
+                <h6>Women'S shoes</h6>
+                <h4>MRP : ₹ 6 795.00</h4>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="SHOES\WOMEN\Under...15K\Women TC 7900\tc-7900-shoes-J5JWtT (1).png" alt="">
+            <div class="des">
+                <h4><b>Nike TC 7900</b></h4>
+                <h6>Women'S shoes</h6>
+                <h4>MRP : ₹ 10 795.00</h4>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="SHOES\WOMEN\Under...15K\Women tech\tech-hera-shoes-JlV5km (1).png" alt="">
+            <div class="des">
+                <h4><b>Nike Tech Hera</b></h4>
+                <h6>Women'S shoes</h6>
+                <h4>MRP : ₹ 9 695.00</h4>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="SHOES\WOMEN\Under...15K\Women v2k\v2k-run-shoes-zJV8TV.png" alt="">
+            <div class="des">
+                <h4><b>Nike V2K Run</b></h4>
+                <h6>Women'S shoes</h6>
+                <h4>MRP : ₹ 14 995.00</h4>
+                </div>
+                </div>
+        <div class="pro">
+            <img src="SHOES\WOMEN\Under...15K\Women gamma force\gamma-force-shoes-CbTnH1(5).png" alt="">
+            <div class="des">
+                <h4><b>Nike Gamma force</b></h4>
+                <h6>Women'S shoes</h6>
+                <h4>MRP : ₹ 8 495.00</h4>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="SHOES\WOMEN\Under...15K\Women max 90\air-max-90-lv8-shoes-9F0GjQ (3).png.png" alt="">
+            <div class="des">
+                <h4><b>Nike Air Max LV8 </b></h4>
+                <h6>Women'S shoes</h6>
+                <h4>MRP : ₹ 12 795.00</h4>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="SHOES\WOMEN\Under...15K\Women stadium 90\jordan-stadium-90-shoes-0cSSz3 (1).jpg" alt="">
+            <div class="des">
+                <h4><b>Jordan Stadium 90</b></h4>
+                <h6>Women'S shoes</h6>
+                <h4>MRP : ₹ 12 795.00</h4>
+            </div>
+        </div>
+        
+            </div>  
+</section> 
+<section class="footer">+
+    <div class="footer-container">
+        <div class="row">
+            <div class="footer-col">
+            <h4>find a store</h4><br>
+                <ul>
+                    <li><a href="#">BECOME A MEMBER</a></li>
+                    <li><a href="#">SEND US A FEEDBACK</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>get help</h4><br>
+                <ul>
+                    
+                    <li><a href="#">payment options</a></li>
+                    <li><a href="#">contact us</a></li>
+                    <li><a href="#">inquiries</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Order Information</h4><br>
+                <ul>
+                  <li><a href="#">order status</a></li>
+                    <li><a href="#">delivery</a></li>
+                    <li><a href="#">returns</a></li>  
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+        </div>
+    </div></div>
+</section>
+    
+    
+</body>
+</body>
+</html>

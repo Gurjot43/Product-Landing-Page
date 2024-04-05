@@ -1,0 +1,82 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    background-image: url(2.jpg);
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+
+}
+.main
+{
+    display: inline-flex;
+    position: fixed;
+    
+}
+.logo
+{
+    width: 550px;
+    height: 470px;
+    background-image: url(1.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    border: 0;
+}
+.logo h2{
+    padding: 15px;
+    color: #f70bf3;
+}
+.signin
+{
+   width: 320px;
+   background:  #be7bef; 
+   color: #fff;
+   padding: 20px;
+   text-align: center;
+   border-radius: 20px;  
+}
+form label{
+    float: left;
+    margin:  25px 0px 0px 40px;
+}
+label{
+    font-size: 14px;
+}
+form input, form button
+{
+    width: 200px;
+    height: 35px;
+    color: #fff;
+    background: #3b3e87;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+
+}
+
+ form a
+ {
+    color: #fff;
+    font-size: 14px;
+    float: right;
+    margin: 15px 20px;
+ }
+ button
+ {
+    background: #ed0c2e;
+    font-size: 16px;
+    padding: 1px;
+    margin: 10px 0px 0px 0px;
+    cursor: pointer;
+ }
+

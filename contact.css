@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2V-bhxWVcQ_GK5spNdydb9ZqqeiOHLdt3QyJ1_qb9WQLN-Z1fY0slRuleoIi6LWQcRww&usqp=CAU'); 
+    background-size: cover;
+    color: #333; 
+    animation: changeBackground 50s infinite; 
+    transition: background-image 1s ease; 
+}
+
+header {
+    color:saddlebrown;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 em {
+    font-style: italic;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: purple; 
+    color: #fff; 
+}
+
+td {
+    background-color: #f8f9fa; 
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+em {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    font-style: italic;
+}
+
+
+@keyframes changeBackground {
+    0% { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWsSr4wYQzERiZg9gpkdNb4Mo6Ahrd_IP55Q&s')};
+    20% { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqzEmzdIi4XeMOxhsBWVE-1nX-YWT65V44xQ&s');}
+    40% { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgrf8U_K_t1gmvje5P5u-XzgRfvJ92s6hEIQ&s'); } /* Third background image */
+    60% { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfWeNSGkE8IhgVk0YKZDxHOddlqUQUNKd-GKDb0W2qIQ&s'); } /* Fourth background image */
+    80% { background-image: url('https://moewalls.com/wp-content/uploads/2024/01/dreamy-purple-field-thumb-364x205.jpg'); } /* Fifth background image */
+    100% { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNkBKbwRMLJZ6OL_rkX3kHeK09l3B8LazEauC0KpHOlx6RxpQmuro7pUxEYmf749vY194&usqp=CAU'); } 
+}
