@@ -33,13 +33,13 @@ body{
 }
 .logo h2{
     padding: 15px;
-    color: #f70bf3;
+    color: #d406d1;
 }
 .signin
 {
    width: 320px;
    background:  #be7bef; 
-   color: #fff;
+   color:white;
    padding: 20px;
    text-align: center;
    border-radius: 20px;  
